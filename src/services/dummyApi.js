@@ -1,7 +1,7 @@
 // Dummy API service to simulate backend responses
 import {
     dummyMainData,
-    dummyQrisData,
+    dummyQRISMerchantData,
     dummyUsers,
     dummyUpdateHistory,
     dummyUserProfile,
@@ -71,7 +71,7 @@ class DummyApiService {
             case 'main':
                 return { data: dummyMainData };
             case 'qris_merchant':
-                return { data: dummyQrisData };
+                return { data: dummyQRISMerchantData };
             default:
                 throw new Error('Unknown data type');
         }
@@ -159,9 +159,8 @@ class DummyApiService {
         return { data: dummyFeeBasedData };
     }
 
-    async getFiles(content = 'main', params = {}) {
+    async getFiles(content = 'main') {
         await delay();
-        const { page = 1, per_page = 5 } = params;
         return { data: dummyFiles[content] || dummyFiles.main };
     }
 
@@ -221,7 +220,7 @@ class DummyApiService {
         return { data: { message: `File ${fileId} deleted successfully` } };
     }
 
-    async post(endpoint, data, config = {}) {
+    async post(endpoint, data) {
         // Handle file activation
         if (endpoint.match(/\/files\/\d+\/activate/)) {
             const fileId = parseInt(endpoint.split('/')[2]);

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from 'recharts';
 import SidebarComponent from '../components/SidebarComponent';
-import { useExcelData } from '../hooks/useExcelData';
+import useDataStore from '../data/dataStore';
 import { formattedDate } from '../services/formattedDate';
 
 const FeeBased = () => {
@@ -13,8 +13,13 @@ const FeeBased = () => {
         mainData,
         isLoadingMain,
         mainError,
-        refetchMain
-    } = useExcelData();
+        fetchExcelData
+    } = useDataStore();
+
+    // Fetch data on component mount
+    useEffect(() => {
+        fetchExcelData('main');
+    }, [fetchExcelData]);
 
     useEffect(() => {
         if (mainData?.data) {
@@ -198,7 +203,7 @@ const FeeBased = () => {
                 <div className="text-center text-red-600">
                     <p>Error: {mainError}</p>
                     <button
-                        onClick={refetchMain}
+                        onClick={() => fetchExcelData('main')}
                         className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                     >
                         Retry

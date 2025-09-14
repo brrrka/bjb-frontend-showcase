@@ -484,6 +484,53 @@ export const dummyQrisData = {
   }
 };
 
+export const dummyQRISMerchantData = {
+  data: {
+    qris_merchant: {
+      total: {
+        merchant_list: 85420,
+        jumlah_merchant: 72840,
+        jumlah_transaksi: 2485760,
+        nominal_transaksi: 18750000000000
+      },
+      kanwil1: {
+        merchant_list: 15220,
+        jumlah_merchant: 12840,
+        jumlah_transaksi: 445760,
+        nominal_transaksi: 3250000000000
+      },
+      kanwil2: {
+        merchant_list: 18640,
+        jumlah_merchant: 15980,
+        jumlah_transaksi: 556280,
+        nominal_transaksi: 4120000000000
+      },
+      kanwil3: {
+        merchant_list: 16850,
+        jumlah_merchant: 14320,
+        jumlah_transaksi: 487940,
+        nominal_transaksi: 3680000000000
+      },
+      kanwil4: {
+        merchant_list: 19480,
+        jumlah_merchant: 16750,
+        jumlah_transaksi: 598520,
+        nominal_transaksi: 4450000000000
+      },
+      kanwil5: {
+        merchant_list: 15230,
+        jumlah_merchant: 12950,
+        jumlah_transaksi: 397260,
+        nominal_transaksi: 3250000000000
+      }
+    }
+  },
+  file_info: {
+    date: new Date().toISOString(),
+    uploaded_by: "QRIS Team"
+  }
+};
+
 export const dummyUsers = {
   data: [
     {

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, LineChart, Line, ResponsiveContainer } from 'recharts';
 import SidebarComponent from '../components/SidebarComponent';
-import { useExcelData } from '../hooks/useExcelData';
+import useDataStore from '../data/dataStore';
 import { HiCreditCard, HiDesktopComputer, HiDeviceMobile, HiQrcode, HiUser, HiUsers } from 'react-icons/hi';
 import { formattedDate } from '../services/formattedDate';
 
@@ -17,8 +17,13 @@ const MainDashboard = () => {
         mainData,
         isLoadingMain,
         mainError,
-        refetchMain
-    } = useExcelData();
+        fetchExcelData
+    } = useDataStore();
+
+    // Fetch data on component mount
+    useEffect(() => {
+        fetchExcelData('main');
+    }, [fetchExcelData]);
 
     useEffect(() => {
         if (mainData?.data) {
@@ -153,7 +158,7 @@ const MainDashboard = () => {
                 <div className="text-center text-red-600">
                     <p>Error: {mainError}</p>
                     <button
-                        onClick={refetchMain}
+                        onClick={() => fetchExcelData('main')}
                         className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                     >
                         Retry

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import SidebarComponent from '../components/SidebarComponent';
 import { HiOfficeBuilding, HiUsers, HiCreditCard } from 'react-icons/hi';
-import { useExcelData } from '../hooks/useExcelData';
+import useDataStore from '../data/dataStore';
 import { formattedDate } from '../services/formattedDate';
 
 const QRISMerchant = () => {
@@ -12,8 +12,13 @@ const QRISMerchant = () => {
         qrisMerchantData,
         isLoadingQrisMerchant,
         qrisMerchantError,
-        refetchQrisMerchant
-    } = useExcelData();
+        fetchExcelData
+    } = useDataStore();
+
+    // Fetch data on component mount
+    useEffect(() => {
+        fetchExcelData('qris_merchant');
+    }, [fetchExcelData]);
 
     const [merchantStats, setMerchantStats] = useState([]);
     const [merchantData, setMerchantData] = useState([]);
@@ -123,7 +128,7 @@ const QRISMerchant = () => {
                 <div className="text-center text-red-600">
                     <p>Error: {qrisMerchantError}</p>
                     <button
-                        onClick={refetchQrisMerchant}
+                        onClick={() => fetchExcelData('qris_merchant')}
                         className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                     >
                         Retry
