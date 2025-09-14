@@ -9,7 +9,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 35000,
         fee_based_edc: 55000,
         fee_based_digital_lainnya: 40000,
-        'fee_based_digi_&_qris': 75000
+        'fee_based_digi_&_qris': 75000,
+        fee_based_total: 400000
       },
       realisasi: {
         fee_based_admin_kartu_atm: 42000,
@@ -18,7 +19,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 32000,
         fee_based_edc: 51000,
         fee_based_digital_lainnya: 36000,
-        'fee_based_digi_&_qris': 69000
+        'fee_based_digi_&_qris': 69000,
+        fee_based_total: 366000
       },
       summary: {
         user_digi_mobile: 750000,
@@ -77,7 +79,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7000,
         fee_based_edc: 11000,
         fee_based_digital_lainnya: 8000,
-        'fee_based_digi_&_qris': 15000
+        'fee_based_digi_&_qris': 15000,
+        fee_based_total: 80000
       },
       realisasi: {
         fee_based_admin_kartu_atm: 8400,
@@ -86,7 +89,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 6400,
         fee_based_edc: 10200,
         fee_based_digital_lainnya: 7200,
-        'fee_based_digi_&_qris': 13800
+        'fee_based_digi_&_qris': 13800,
+        fee_based_total: 73200
       },
       summary: {
         user_digi_mobile: 125000,
@@ -145,7 +149,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 8000,
         fee_based_edc: 12000,
         fee_based_digital_lainnya: 9000,
-        'fee_based_digi_&_qris': 17000
+        'fee_based_digi_&_qris': 17000,
+        fee_based_total: 90000
       },
       realisasi: {
         fee_based_admin_kartu_atm: 9500,
@@ -154,7 +159,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7200,
         fee_based_edc: 11400,
         fee_based_digital_lainnya: 8100,
-        'fee_based_digi_&_qris': 15300
+        'fee_based_digi_&_qris': 15300,
+        fee_based_total: 82100
       },
       summary: {
         user_digi_mobile: 158000,
@@ -213,7 +219,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7500,
         fee_based_edc: 11500,
         fee_based_digital_lainnya: 8500,
-        'fee_based_digi_&_qris': 16000
+        'fee_based_digi_&_qris': 16000,
+        fee_based_total: 85000
       },
       realisasi: {
         fee_based_admin_kartu_atm: 8550,
@@ -222,7 +229,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 6750,
         fee_based_edc: 10350,
         fee_based_digital_lainnya: 7650,
-        'fee_based_digi_&_qris': 14400
+        'fee_based_digi_&_qris': 14400,
+        fee_based_total: 76500
       },
       summary: {
         user_digi_mobile: 135000,
@@ -281,7 +289,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 8500,
         fee_based_edc: 13000,
         fee_based_digital_lainnya: 9500,
-        'fee_based_digi_&_qris': 18000
+        'fee_based_digi_&_qris': 18000,
+        fee_based_total: 96000
       },
       realisasi: {
         fee_based_admin_kartu_atm: 10450,
@@ -290,7 +299,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7650,
         fee_based_edc: 11700,
         fee_based_digital_lainnya: 8550,
-        'fee_based_digi_&_qris': 16200
+        'fee_based_digi_&_qris': 16200,
+        fee_based_total: 86950
       },
       summary: {
         user_digi_mobile: 175000,
@@ -349,7 +359,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7800,
         fee_based_edc: 12200,
         fee_based_digital_lainnya: 8800,
-        'fee_based_digi_&_qris': 16500
+        'fee_based_digi_&_qris': 16500,
+        fee_based_total: 88500
       },
       realisasi: {
         fee_based_admin_kartu_atm: 9690,
@@ -358,7 +369,8 @@ export const dummyMainData = {
         fee_based_laku_pandai: 7020,
         fee_based_edc: 10980,
         fee_based_digital_lainnya: 7920,
-        'fee_based_digi_&_qris': 14850
+        'fee_based_digi_&_qris': 14850,
+        fee_based_total: 80160
       },
       summary: {
         user_digi_mobile: 157000,
